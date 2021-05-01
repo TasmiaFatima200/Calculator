@@ -1,1 +1,3 @@
 # Calculator
+
+##Simple and Beautiful
