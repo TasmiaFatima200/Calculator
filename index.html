@@ -3,39 +3,7 @@
 
     <title>Calculator</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    
-<style>
-    .calculator {
-        padding: 4px;
-        margin: 4px;
-        background-color: #3a4655;
-        width: 100%;
-        height: auto;
-    }
-
-    .count {
-       color: #DC143C;
-       margin-top: 1rem;
-    }
-
-
-    input[type="text"]:disabled {
-        background-color: white;
-        text-align: right;
-        border: 1px solid red;
-    }
-
-    .design {
-        text-align: center;
-        border-radius: 50%;
-        width: 70px;
-        height: auto;
-        color: black; 
-        padding: 4px;
-        margin: 4px;
-        border: 1px solid red;
-    }
-</style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <div class="text-center">
     <h1 align="center" class="count">Calculator</h1>
@@ -124,42 +92,7 @@
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"> </script>
-
-<script>
-    $(document).ready(function() {
-        $(".design").click(function() {
-            if (!$(this).hasClass("not")) {
-                if ($("#expression").val() == 0) {
-                    $("#expression").val($(this).text());
-                } else {
-                    $("#expression").val($("#expression").val() + $(this).text());
-                }
-            }
-        });
-
-        $("#allClear").click(function() {
-            $("#expression, #result").val("0");
-        });
-
-       
-        $("#equals").click(function() {
-            var result;
-            
-            try {
-                result = (eval(($("#expression").val())));
-                $('#errors-div').hide();
-                $('#results-div').html(result).fadeIn('slow');
-                $("#expression").val("0");
-            } catch (e) {
-                if (e instanceof SyntaxError || e instanceof TypeError) {
-                    $('#errors-div').html('Error! Calculating values. Make sure to only perform one calculation at a time').fadeIn('slow');
-                    $("#expression").val("0");
-                    $("#results-div").hide();
-                }
-            }
-        });   
-    }); 
-    </script>
+<script src="script.js"></script>
 </body>
 
 </html>

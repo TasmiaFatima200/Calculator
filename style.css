@@ -1,0 +1,30 @@
+.calculator {
+    padding: 4px;
+    margin: 4px;
+    background-color: #3a4655;
+    width: 100%;
+    height: auto;
+}
+
+.count {
+ color: #DC143C;
+ margin-top: 1rem;
+}
+
+
+input[type="text"]:disabled {
+    background-color: white;
+    text-align: right;
+    border: 1px solid red;
+}
+
+.design {
+    text-align: center;
+    border-radius: 50%;
+    width: 70px;
+    height: auto;
+    color: black; 
+    padding: 4px;
+    margin: 4px;
+    border: 1px solid red;
+}
